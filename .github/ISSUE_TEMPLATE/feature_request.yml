@@ -1,0 +1,35 @@
+name: Feature request
+description: Suggest something nMedium could do, or do better
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The task or situation, and what makes it awkward or impossible today.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: How you picture it working. Rough ideas are fine.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where do you use nMedium?
+      multiple: true
+      options:
+        - Android app
+        - Web app in a browser
+        - Web app installed as an app (PWA)
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, examples from other apps, or anything else that explains the idea.

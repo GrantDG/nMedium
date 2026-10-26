@@ -1,0 +1,90 @@
+name: Bug report
+description: Something in nMedium doesn't work as it should
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please don't include passwords, access keys or your server's
+        public address: this page is visible to everyone.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect to happen instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The steps that lead to the problem, as precisely as you can.
+      placeholder: |
+        1. Open the queue
+        2. Tap a track
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - Once so far
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where are you running nMedium?
+      options:
+        - Android app
+        - Web app in a browser
+        - Web app installed as an app (PWA)
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device, OS and browser
+      description: For example "Pixel 8, Android 16" or "Windows 11, Chrome 141".
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: nMedium version
+      description: If you know it; otherwise roughly when you installed or last updated it.
+
+  - type: dropdown
+    id: playback-zone
+    attributes:
+      label: Where was it playing?
+      description: If the problem involves playback.
+      options:
+        - Not about playback
+        - This device (playing on the phone or browser)
+        - A zone on the media server
+        - Not sure
+
+  - type: input
+    id: server
+    attributes:
+      label: Media server and version
+      description: For example "JRiver Media Center 34.0.56 on Windows".
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, a screen recording, or anything else that might help. You can drag files in here.
